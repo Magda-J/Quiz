@@ -47,16 +47,16 @@ const quizData = [
   },
 ];
 
-// Code for intro
-
-
-
-// End of code for intro
-
+// // Start page code
+const startButton = document.getElementById("start-btn");
+// // End of the start page code
 
 const quiz = document.getElementById("quiz");
+const mainHeader = document.getElementById("main-header");
+const quizHeader = document.getElementById("quiz-header");
 const answerEls = document.querySelectorAll(".answer");
 const questionEl = document.getElementById("question");
+const list = document.getElementById("list");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
@@ -66,6 +66,20 @@ const sumbmitBtn = document.getElementById("submit");
 
 let currentQuiz = 0;
 let score = 0;
+
+// // // Start page code attempts
+startButton.addEventListener("click", startGame);
+function startGame() {
+  startButton.classList.add("invisible");
+  mainHeader.classList.add("invisible");
+  quiz.classList.remove("invisible");
+  sumbmitBtn.classList.remove("invisible");
+  list.classList.remove("invisible");
+  quizHeader.classList.remove("invisible");
+  loadQuiz();
+}
+
+// // // End of the start page code
 
 loadQuiz();
 
