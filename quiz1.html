@@ -7,64 +7,69 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    
-<div> </div>
-<!-- Start of initial info page -->
-<!-- <div id="intro" class="mx-auto">
-  <h2 class="text-center text-white p-4">Find our your score!</h2>
-  <br /><br />
-  <p class="text-center text-white">
-    Answer the questions to check your general knowledge
-  </p>
-  <br /><br />
-  <button
-    type="button"
-    value="Start Quiz"
-    class="flex flex-col m-auto my-8 btn bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded"
-    onclick="startQuiz()"
-  >
-    Start Quiz
-  </button>
-</div> -->
-<!-- End of initial info page -->
-<!-- Start of the quiz -->
-    <div
-      class="quiz-container border-4 flex flex-col w-screen px-5 h-screen bg-gray-900 justify-center items-center"
-      id="quiz"
-    >
-      <div class="quiz-header bg-purple text-white p-4 border-4 rounded-2xl bg-pink-900">
-        <h2 id="question"  class=" font-bold  rounded-lg p-4 mb-10 text-xl">Question text</h2>
-        <ul>
-          <li class="p-2">
-            <input type="radio" name="answer" id="a" class="answer" />
-            <label for="a" id="a_text"></label>
-          </li>
-          <li class="p-2">
-            <input type="radio" name="answer" id="b" class="answer" />
-            <label for="b" id="b_text"></label>
-          </li>
-          <li class="p-2">
-            <input type="radio" name="answer" id="c" class="answer" />
-            <label for="c" id="c_text"></label>
-          </li>
-          <li class="p-2">
-            <input type="radio" name="answer" id="d" class="answer" />
-            <label for="d" id="d_text"></label>
-          </li>
-          <li class="p-2">
-            <input type="radio" name="answer" id="e" class="answer" />
-            <label for="e" id="e_text"></label>
-          </li>
-        </ul>
-      </div>
-      <button
-        id="submit"
-        class="flex flex-col m-auto my-8 btn bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded"
+    <div></div>
+
+    <!-- Start of the quiz -->
+    <div class="container">
+      <div
+        class="border-4 flex flex-col w-screen px-5 h-screen bg-gradient-to-r from-black to-rose-900 justify-center items-center"
+        id="quiz"
       >
-        Submit
+        <div
+          class="invisible bg-purple text-white p-4 border-4 rounded-2xl bg-pink-900" id="quiz-header"
+        >
+          <h2 id="question" class="font-bold rounded-lg p-4 mb-4 text-xl">
+            Question text
+          </h2>
+          <ul class="invisible" id="list">
+            <li class="p-2">
+              <input type="radio" name="answer" id="a" class="answer" />
+              <label for="a" id="a_text"></label>
+            </li>
+            <li class="p-2">
+              <input type="radio" name="answer" id="b" class="answer" />
+              <label for="b" id="b_text"></label>
+            </li>
+            <li class="p-2">
+              <input type="radio" name="answer" id="c" class="answer" />
+              <label for="c" id="c_text"></label>
+            </li>
+            <li class="p-2">
+              <input type="radio" name="answer" id="d" class="answer" />
+              <label for="d" id="d_text"></label>
+            </li>
+            <li class="p-2">
+              <input type="radio" name="answer" id="e" class="answer" />
+              <label for="e" id="e_text"></label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          id="submit"
+          class="invisible flex flex-col m-auto my-8 btn bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Submit
+        </button>
+
+        <!-- Trial with the start button -->
+        <div>
+       <button
+        id="start-btn"
+        class="start-btn flex flex-col m-auto my-8 bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Start the Quiz
       </button>
-      <!-- End of the quiz -->
+      <!-- End of trial with the start button -->
+      </div>        
+      </div>
+      <!-- End of Submit Button -->
+
+      
+      
+      <script src="quiz1.js"></script>
     </div>
-    <script src="quiz1.js"></script>
+    <!-- End of the quiz -->
   </body>
 </html>
