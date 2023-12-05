@@ -49,7 +49,7 @@ const quizData = [
 
 // // Start page code
 const startButton = document.getElementById("start-btn");
-// // End of the start page code
+// // End of the start page button code
 
 const quiz = document.getElementById("quiz");
 const mainHeader = document.getElementById("main-header");
