@@ -47,6 +47,13 @@ const quizData = [
   },
 ];
 
+// Code for intro
+
+
+
+// End of code for intro
+
+
 const quiz = document.getElementById("quiz");
 const answerEls = document.querySelectorAll(".answer");
 const questionEl = document.getElementById("question");
@@ -63,7 +70,7 @@ let score = 0;
 loadQuiz();
 
 function loadQuiz() {
-  deselectAbswers();
+  deselectAnswers();
 
   const currentQuizData = quizData[currentQuiz];
 
@@ -76,7 +83,7 @@ function loadQuiz() {
   e_text.innerText = currentQuizData.e;
 }
 
-function deselectAbswers() {
+function deselectAnswers() {
   answerEls.forEach((answerEl) => {
     answerEl.checked = false;
   });
