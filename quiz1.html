@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General Knowledge Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Frame for the quiz -->
+    <div
+      class="quiz-container border-4 flex flex-col w-screen px-5 h-screen bg-gray-900 justify-center items-center"
+      id="quiz"
+    >
+      <div class="quiz-header text-white p-4">
+        <h2 id="question"  class="font-bold p-4 mb-10 text-xl">Question text</h2>
+        <ul>
+          <li class="p-2">
+            <input type="radio" name="answer" id="a" class="answer" />
+            <label for="a" id="a_text"></label>
+          </li>
+          <li class="p-2">
+            <input type="radio" name="answer" id="b" class="answer" />
+            <label for="b" id="b_text"></label>
+          </li>
+          <li class="p-2">
+            <input type="radio" name="answer" id="c" class="answer" />
+            <label for="c" id="c_text"></label>
+          </li>
+          <li class="p-2">
+            <input type="radio" name="answer" id="d" class="answer" />
+            <label for="d" id="d_text"></label>
+          </li>
+          <li class="p-2">
+            <input type="radio" name="answer" id="e" class="answer" />
+            <label for="e" id="e_text"></label>
+          </li>
+        </ul>
+      </div>
+      <button
+        id="submit"
+        class="flex flex-col m-auto my-8 btn bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Submit
+      </button>
+    </div>
+    <script src="quiz1.js"></script>
+  </body>
+</html>
