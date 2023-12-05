@@ -52,6 +52,7 @@ const startButton = document.getElementById("start-btn");
 // // End of the start page code
 
 const quiz = document.getElementById("quiz");
+const mainHeader = document.getElementById("main-header");
 const quizHeader = document.getElementById("quiz-header");
 const answerEls = document.querySelectorAll(".answer");
 const questionEl = document.getElementById("question");
@@ -70,6 +71,7 @@ let score = 0;
 startButton.addEventListener("click", startGame);
 function startGame() {
   startButton.classList.add("invisible");
+  mainHeader.classList.add("invisible");
   quiz.classList.remove("invisible");
   sumbmitBtn.classList.remove("invisible");
   list.classList.remove("invisible");
