@@ -1,4 +1,4 @@
-const quizData = [
+const quizQuestions = [
   {
     question: "What is the capital of Japan?",
     a: "Nagoya",
@@ -54,8 +54,8 @@ const startButton = document.getElementById("start-btn");
 const quiz = document.getElementById("quiz");
 const mainHeader = document.getElementById("main-header");
 const quizHeader = document.getElementById("quiz-header");
-const answerEls = document.querySelectorAll(".answer");
-const questionEl = document.getElementById("question");
+const answerElement = document.querySelectorAll(".answer");
+const questionElement = document.getElementById("question");
 const list = document.getElementById("list");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
@@ -64,65 +64,65 @@ const d_text = document.getElementById("d_text");
 const e_text = document.getElementById("e_text");
 const sumbmitBtn = document.getElementById("submit");
 
-let currentQuiz = 0;
+let currentQuizQuestion = 0;
 let score = 0;
 
 // // // Start page code attempts
-startButton.addEventListener("click", startGame);
-function startGame() {
+startButton.addEventListener("click", startQuiz);
+function startQuiz() {
   startButton.classList.add("invisible");
   mainHeader.classList.add("invisible");
   quiz.classList.remove("invisible");
   sumbmitBtn.classList.remove("invisible");
   list.classList.remove("invisible");
   quizHeader.classList.remove("invisible");
-  loadQuiz();
+  loadQuizQuestions();
 }
 
 // // // End of the start page code
 
-loadQuiz();
+loadQuizQuestions();
 
-function loadQuiz() {
-  deselectAnswers();
+function loadQuizQuestions() {
+  deselectAns();
 
-  const currentQuizData = quizData[currentQuiz];
+  const currentquizQuestions = quizQuestions[currentQuizQuestion];
 
-  questionEl.innerText = currentQuizData.question;
+  questionElement.innerText = currentquizQuestions.question;
 
-  a_text.innerText = currentQuizData.a;
-  b_text.innerText = currentQuizData.b;
-  c_text.innerText = currentQuizData.c;
-  d_text.innerText = currentQuizData.d;
-  e_text.innerText = currentQuizData.e;
+  a_text.innerText = currentquizQuestions.a;
+  b_text.innerText = currentquizQuestions.b;
+  c_text.innerText = currentquizQuestions.c;
+  d_text.innerText = currentquizQuestions.d;
+  e_text.innerText = currentquizQuestions.e;
 }
 
-function deselectAnswers() {
-  answerEls.forEach((answerEl) => {
-    answerEl.checked = false;
+function deselectAns() {
+  answerElement.forEach((answerElem) => {
+    answerElem.checked = false;
   });
 }
 
-function getSelected() {
+function ansSelect() {
   let answer;
 
-  answerEls.forEach((answerEl) => {
-    if (answerEl.checked) {
-      answer = answerEl.id;
+  answerElement.forEach((answerElem) => {
+    if (answerElem.checked) {
+      answer = answerElem.id;
     }
   });
   return answer;
 }
 
 sumbmitBtn.addEventListener("click", () => {
-  const answer = getSelected();
-  if (answer === quizData[currentQuiz].correct) {
+  const answer = ansSelect();
+  if (answer === quizQuestions[currentQuizQuestion].correct) {
     score++;
   }
-  currentQuiz++;
+  currentQuizQuestion++;
 
-  if (currentQuiz < quizData.length) {
-    loadQuiz();
+  if (currentQuizQuestion < quizQuestions.length) {
+    loadQuizQuestions();
   } else {
     quiz.innerHTML = `<h2 class="text-white">You got ${score} out of 5 correct!</h2>
         <button class="flex flex-col m-auto my-8 btn bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded" onclick="location.reload()">Reload</button>`;
