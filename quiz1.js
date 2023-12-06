@@ -1,6 +1,6 @@
 const quizQuestions = [
   {
-    question: "What is the capital of Japan?",
+    question: "Question 1/5: What is the capital of Japan?",
     a: "Nagoya",
     b: "Kyoto",
     c: "Osaka",
@@ -9,7 +9,7 @@ const quizQuestions = [
     correct: "d",
   },
   {
-    question: "Who wrote the play Romeo and Juliet?",
+    question: "Question 2/5: Who wrote the play Romeo and Juliet?",
     a: "Charles Dickens",
     b: "William Shakespeare",
     c: "Jane Austen",
@@ -18,7 +18,7 @@ const quizQuestions = [
     correct: "b",
   },
   {
-    question: "What is the largest mammal in the world?",
+    question: "Question 3/5: What is the largest mammal in the world?",
     a: "Elephant",
     b: "Lion",
     c: "Blue Whale",
@@ -28,7 +28,7 @@ const quizQuestions = [
   },
   {
     question:
-      "In which year did the Apollo 11 mission successfully land humans on the Moon?",
+      "Question 4/5: In which year did the Apollo 11 mission successfully land humans on the Moon?",
     a: "1965",
     b: "1981",
     c: "1967",
@@ -37,7 +37,7 @@ const quizQuestions = [
     correct: "e",
   },
   {
-    question: "Who painted the Mona Lisa?",
+    question: "Question 5/5: Who painted the Mona Lisa?",
     a: "Pablo Picasso",
     b: "Leonardo da Vinci",
     c: "Vincent van Gogh",
