@@ -88,13 +88,13 @@ loadQuizQuestions();
 
 function loadQuizQuestions() {
   deselectAns();
-  // Line 94 extracts the current set of quiz questions from an array quizQuestions
+  // Line 92 extracts the current set of quiz questions from an array quizQuestions
   const currentquizQuestions = quizQuestions[currentQuizQ];
 
-  //Line 97 updates the text content of an HTML element with 'question' ID assigned to 'questionElement' (line 61) to display the current quiz question.
+  //Line 95 updates the text content of an HTML element with 'question' ID assigned to 'questionElement' (line 60) to display the current quiz question.
   questionElement.innerText = currentquizQuestions.question;
 
-  // Lines below update the text content of an HTML element with the ID  'a_text' etc. to display the text for answer choice A etc.
+  // Lines below update the text content of an HTML element with the ID  'a_text' etc. to display the text for answer choice "a" etc.
   a_text.innerText = currentquizQuestions.a;
   b_text.innerText = currentquizQuestions.b;
   c_text.innerText = currentquizQuestions.c;
@@ -106,7 +106,7 @@ function loadQuizQuestions() {
 // Start of the function which deselects all the answer choices and displays the next set
 function deselectAns() {
   answerElement.forEach((answerElem) => {
-    // For each answer element, line 112 sets the checked property to false. This is commonly used with radio buttons to unselect them.
+    // For each answer element, line 110 sets the checked property to false. This is commonly used with radio buttons to unselect them.
     answerElem.checked = false;
   });
 }
@@ -114,7 +114,6 @@ function deselectAns() {
 // ansSelect() function is designed to determine which answer is currently selected
 function ansSelect() {
   let answer;
-
   answerElement.forEach((answerElem) => {
     if (answerElem.checked) {
       // the id attribute of the answer elements uniquely identifies each answer and the function returns the id of the selected answer
